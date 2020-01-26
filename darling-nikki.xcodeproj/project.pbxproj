@@ -3,19 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE226CC823DCC2F800DDD2FF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE226CC723DCC2F800DDD2FF /* Date.swift */; };
+		BE458EA423DB044700A54895 /* Zensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE458EA323DB044700A54895 /* Zensor.swift */; };
+		BE458EA623DB07BA00A54895 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */; };
 		BE5F3FCA23DAF2A100CF7185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */; };
 		BE5F3FCC23DAF2A100CF7185 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */; };
 		BE5F3FCE23DAF2A100CF7185 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F3FCD23DAF2A100CF7185 /* ContentView.swift */; };
 		BE5F3FD023DAF2A100CF7185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FCF23DAF2A100CF7185 /* Assets.xcassets */; };
 		BE5F3FD323DAF2A100CF7185 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD223DAF2A100CF7185 /* Preview Assets.xcassets */; };
 		BE5F3FD623DAF2A100CF7185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD423DAF2A100CF7185 /* LaunchScreen.storyboard */; };
+		D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_darling_nikki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.release.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.release.xcconfig"; sourceTree = "<group>"; };
+		7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.debug.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.debug.xcconfig"; sourceTree = "<group>"; };
+		BE226CC723DCC2F800DDD2FF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BE458EA323DB044700A54895 /* Zensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zensor.swift; sourceTree = "<group>"; };
+		BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE5F3FC623DAF2A100CF7185 /* darling-nikki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "darling-nikki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05413F8A5E3D7172078ED021 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE5F3FBD23DAF2A100CF7185 = {
 			isa = PBXGroup;
 			children = (
 				BE5F3FC823DAF2A100CF7185 /* darling-nikki */,
 				BE5F3FC723DAF2A100CF7185 /* Products */,
+				EF1C1DDC0EF930EDB21711AC /* Pods */,
+				05413F8A5E3D7172078ED021 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +77,7 @@
 		BE5F3FC823DAF2A100CF7185 /* darling-nikki */ = {
 			isa = PBXGroup;
 			children = (
+				BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */,
 				BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */,
 				BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */,
 				BE5F3FCD23DAF2A100CF7185 /* ContentView.swift */,
@@ -63,6 +85,8 @@
 				BE5F3FD423DAF2A100CF7185 /* LaunchScreen.storyboard */,
 				BE5F3FD723DAF2A100CF7185 /* Info.plist */,
 				BE5F3FD123DAF2A100CF7185 /* Preview Content */,
+				BE458EA323DB044700A54895 /* Zensor.swift */,
+				BE226CC723DCC2F800DDD2FF /* Date.swift */,
 			);
 			path = "darling-nikki";
 			sourceTree = "<group>";
@@ -75,6 +99,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF1C1DDC0EF930EDB21711AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */,
+				211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "darling-nikki" */;
 			buildPhases = (
+				A7B297FD01A61E327ADE4803 /* [CP] Check Pods Manifest.lock */,
 				BE5F3FC223DAF2A100CF7185 /* Sources */,
 				BE5F3FC323DAF2A100CF7185 /* Frameworks */,
 				BE5F3FC423DAF2A100CF7185 /* Resources */,
+				4BF15A9158E36B0964BCA5EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5F3FD623DAF2A100CF7185 /* LaunchScreen.storyboard in Resources */,
+				BE458EA623DB07BA00A54895 /* GoogleService-Info.plist in Resources */,
 				BE5F3FD323DAF2A100CF7185 /* Preview Assets.xcassets in Resources */,
 				BE5F3FD023DAF2A100CF7185 /* Assets.xcassets in Resources */,
 			);
@@ -141,11 +177,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BF15A9158E36B0964BCA5EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B297FD01A61E327ADE4803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-darling-nikki-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE5F3FC223DAF2A100CF7185 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE458EA423DB044700A54895 /* Zensor.swift in Sources */,
+				BE226CC823DCC2F800DDD2FF /* Date.swift in Sources */,
 				BE5F3FCA23DAF2A100CF7185 /* AppDelegate.swift in Sources */,
 				BE5F3FCC23DAF2A100CF7185 /* SceneDelegate.swift in Sources */,
 				BE5F3FCE23DAF2A100CF7185 /* ContentView.swift in Sources */,
@@ -282,6 +362,7 @@
 		};
 		BE5F3FDB23DAF2A100CF7185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +383,7 @@
 		};
 		BE5F3FDC23DAF2A100CF7185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

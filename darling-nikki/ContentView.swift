@@ -8,9 +8,60 @@
 
 import SwiftUI
 
+
+struct ZensorView: View
+{
+    @ObservedObject var model : Zensor
+    
+    var body: some View
+    {
+        HStack
+            {
+                Text(model.name)
+                Text(model.duration)
+                Text(model.samples.count.description)
+                Text(model.hr)
+                Text(model.hrv)
+                Text(model.isMeditating.description)
+                Text(model.level.description)
+                
+        }
+    }
+}
+
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+    
+    @ObservedObject var zensors = Zensors()
+    
+    var body: some View
+    {
+        VStack {
+            Text("Zensors")
+                List {
+                    HStack
+                        {
+                            Text("Name")
+                            Text("Duration")
+                            Text("Samples")
+                            Text("HR")
+                            Text("HRV")
+                            Text("Meditating")
+                            Text("Level")
+                    }
+                        ForEach(zensors.current) {
+                            
+                            zensor in
+                            
+                            ZensorView(model: zensor)
+                            
+                    }
+                }
+
+                Button("Reset")
+                {
+                        
+                }
+        }
     }
 }
 
