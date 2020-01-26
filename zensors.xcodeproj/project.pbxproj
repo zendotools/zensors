@@ -27,6 +27,7 @@
 		7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.debug.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.debug.xcconfig"; sourceTree = "<group>"; };
 		BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE226CC723DCC2F800DDD2FF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BE39098723DE59E700FEC6C3 /* zensors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zensors.entitlements; sourceTree = "<group>"; };
 		BE458EA323DB044700A54895 /* Zensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zensor.swift; sourceTree = "<group>"; };
 		BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE5F3FC623DAF2A100CF7185 /* zensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +85,7 @@
 		BE5F3FC823DAF2A100CF7185 /* zensors */ = {
 			isa = PBXGroup;
 			children = (
+				BE39098723DE59E700FEC6C3 /* zensors.entitlements */,
 				BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */,
 				BEAEE49023DD7B6A002B5698 /* darling-nikkiDebug.entitlements */,
 				BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */,
@@ -399,6 +401,7 @@
 			baseConfigurationReference = 211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = zensors/zensors.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"zensors/Preview Content\"";
