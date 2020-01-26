@@ -158,6 +158,18 @@ public class Zensor : Identifiable, ObservableObject
         }
         
     }
+    
+    func reset()
+    {
+        let database = Database.database().reference()
+        
+        let players = database.child("players")
+        
+        let key = players.child(self.name)
+        
+        key.removeValue()
+        
+    }
 }
 
 open class Zensors : NSObject, CBCentralManagerDelegate, ObservableObject {
@@ -173,6 +185,18 @@ open class Zensors : NSObject, CBCentralManagerDelegate, ObservableObject {
         super.init()
         
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
+    }
+    
+    func reset()
+    {
+        self.current.forEach {
+            
+            (zensor) in
+            
+            zensor.reset()
+        }
+        
+        self.current.removeAll()
     }
     
     public func centralManagerDidUpdateState(_ central: CBCentralManager)

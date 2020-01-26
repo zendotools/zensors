@@ -17,13 +17,36 @@ struct ZensorView: View
     {
         HStack
             {
-                Text(model.name)
-                Text(model.duration)
-                Text(model.samples.count.description)
-                Text(model.hr)
-                Text(model.hrv)
-                Text(model.isMeditating.description)
-                Text(model.level.description)
+                VStack {
+                    
+                    Image(systemName: "dot.radiowaves.right").resizable()
+                        .frame(width: 33.0, height: 33.0).padding(5)
+                    
+                    Text(model.name).font(.system(size: 10))
+                }
+                HStack {
+                    
+                    Image(systemName: "stopwatch")
+                    Text(model.duration).font(.system(size: 10)).bold()
+                    
+                    Image(systemName: "gauge")
+                    Text(model.samples.count.description).font(.system(size: 10)).bold()
+                    
+                }
+                HStack {
+                    
+                    Image(systemName: "heart")
+                    Text(model.hr).font(.system(size: 10)).bold()
+                    
+                    Image(systemName: "waveform.path.ecg")
+                    Text(model.hrv).font(.system(size: 10))
+                    
+                    Image(systemName: "eye.fill")
+                    Text(model.isMeditating.description).font(.system(size: 10))
+                    
+                    Image(systemName: "list.number")
+                    Text(model.level.description).font(.system(size: 10))
+                }
                 
         }
     }
@@ -36,18 +59,8 @@ struct ContentView: View {
     var body: some View
     {
         VStack {
-            Text("Zensors")
+            Text("Zensors").font(.headline)
                 List {
-                    HStack
-                        {
-                            Text("Name")
-                            Text("Duration")
-                            Text("Samples")
-                            Text("HR")
-                            Text("HRV")
-                            Text("Meditating")
-                            Text("Level")
-                    }
                         ForEach(zensors.current) {
                             
                             zensor in
@@ -55,17 +68,19 @@ struct ContentView: View {
                             ZensorView(model: zensor)
                             
                     }
-                }
+            }
 
                 Button("Reset")
                 {
-                        
+                    self.zensors.reset()
                 }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
         ContentView()
     }
