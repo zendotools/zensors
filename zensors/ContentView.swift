@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+import HomeKit
 
 struct ZensorView: View
 {
@@ -19,35 +19,49 @@ struct ZensorView: View
             {
                 VStack {
                     
-                    Image(systemName: "dot.radiowaves.right").resizable()
-                        .frame(width: 33.0, height: 33.0).padding(5)
+                    Image(systemName: "dot.radiowaves.right").padding(5)
                     
-                    Text(model.name).font(.system(size: 10))
+                    Text(model.name).font(.system(size: 10)).padding(10)
                 }
-                HStack {
+            
                     
-                    Image(systemName: "stopwatch")
-                    Text(model.duration).font(.system(size: 10)).bold()
+                    VStack {
                     
-                    Image(systemName: "gauge")
-                    Text(model.samples.count.description).font(.system(size: 10)).bold()
+                        Image(systemName: "stopwatch").padding(5)
+                        Text(model.duration).font(.system(size: 10)).bold()
+                    }
                     
-                }
-                HStack {
+                    VStack {
+                        Image(systemName: "gauge").padding(5)
+                        Text(model.samples.count.description).font(.system(size: 10)).bold()
+                    }
                     
-                    Image(systemName: "heart")
+                    VStack {
+                    Image(systemName: "heart").padding(5)
                     Text(model.hr).font(.system(size: 10)).bold()
+                        
+                }
                     
-                    Image(systemName: "waveform.path.ecg")
-                    Text(model.hrv).font(.system(size: 10))
+                VStack {
+                    Image(systemName: "waveform.path.ecg").padding(5)
+                    Text(model.hrv).font(.system(size: 10)).bold()
                     
-                    Image(systemName: "eye.fill")
-                    Text(model.isMeditating.description).font(.system(size: 10))
-                    
-                    Image(systemName: "list.number")
-                    Text(model.level.description).font(.system(size: 10))
                 }
                 
+                VStack {
+                    
+                    Image(systemName: "eye.fill").padding(5)
+                    Text(model.isMeditating.description).font(.system(size: 10)).bold()
+                    
+                }
+                
+                VStack {
+                    
+                    Image(systemName: "list.number").padding(5)
+                    Text(model.level.description).font(.system(size: 10)).bold()
+                    
+                }
+                    
         }
     }
 }

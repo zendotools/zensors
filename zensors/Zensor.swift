@@ -38,13 +38,13 @@ public class Zensor : Identifiable, ObservableObject
         
         self.samples.append(hr)
         
-        self.hr = hr.description
+        self.hr = hr.rounded().description
          
         self.duration = self.getDuration().description
 
         if (self.samples.count > 10)
         {
-            self.hrv = self.getHRV().description
+            self.hrv = self.getHRV().rounded().description
             
             self.isMeditating = getMeditativeState()
             
@@ -133,7 +133,7 @@ public class Zensor : Identifiable, ObservableObject
         let sumOfSquaredAvgDiff = rrIntervals.map
         {pow($0 - avg, 2.0)}.reduce(0, {$0 + $1})
         
-        return sqrt(sumOfSquaredAvgDiff / length)
+        return 100 * sqrt(sumOfSquaredAvgDiff / length)
         
     }
     

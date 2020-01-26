@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1291DD23DE19DE004E0E58 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */; };
 		BE226CC823DCC2F800DDD2FF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE226CC723DCC2F800DDD2FF /* Date.swift */; };
 		BE458EA423DB044700A54895 /* Zensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE458EA323DB044700A54895 /* Zensor.swift */; };
 		BE458EA623DB07BA00A54895 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */; };
@@ -16,6 +17,7 @@
 		BE5F3FD023DAF2A100CF7185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FCF23DAF2A100CF7185 /* Assets.xcassets */; };
 		BE5F3FD323DAF2A100CF7185 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD223DAF2A100CF7185 /* Preview Assets.xcassets */; };
 		BE5F3FD623DAF2A100CF7185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD423DAF2A100CF7185 /* LaunchScreen.storyboard */; };
+		BEAEE49223DD7B6A002B5698 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAEE49123DD7B6A002B5698 /* HomeKit.framework */; };
 		D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,10 +25,11 @@
 		02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_darling_nikki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.release.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.release.xcconfig"; sourceTree = "<group>"; };
 		7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.debug.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.debug.xcconfig"; sourceTree = "<group>"; };
+		BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE226CC723DCC2F800DDD2FF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BE458EA323DB044700A54895 /* Zensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zensor.swift; sourceTree = "<group>"; };
 		BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BE5F3FC623DAF2A100CF7185 /* darling-nikki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "darling-nikki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5F3FC623DAF2A100CF7185 /* zensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE5F3FCD23DAF2A100CF7185 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +37,8 @@
 		BE5F3FD223DAF2A100CF7185 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE5F3FD523DAF2A100CF7185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5F3FD723DAF2A100CF7185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAEE49023DD7B6A002B5698 /* darling-nikkiDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "darling-nikkiDebug.entitlements"; sourceTree = "<group>"; };
+		BEAEE49123DD7B6A002B5698 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAEE49223DD7B6A002B5698 /* HomeKit.framework in Frameworks */,
 				D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +57,7 @@
 		05413F8A5E3D7172078ED021 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEAEE49123DD7B6A002B5698 /* HomeKit.framework */,
 				02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */,
 			);
 			name = Frameworks;
@@ -59,7 +66,7 @@
 		BE5F3FBD23DAF2A100CF7185 = {
 			isa = PBXGroup;
 			children = (
-				BE5F3FC823DAF2A100CF7185 /* darling-nikki */,
+				BE5F3FC823DAF2A100CF7185 /* zensors */,
 				BE5F3FC723DAF2A100CF7185 /* Products */,
 				EF1C1DDC0EF930EDB21711AC /* Pods */,
 				05413F8A5E3D7172078ED021 /* Frameworks */,
@@ -69,14 +76,16 @@
 		BE5F3FC723DAF2A100CF7185 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE5F3FC623DAF2A100CF7185 /* darling-nikki.app */,
+				BE5F3FC623DAF2A100CF7185 /* zensors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE5F3FC823DAF2A100CF7185 /* darling-nikki */ = {
+		BE5F3FC823DAF2A100CF7185 /* zensors */ = {
 			isa = PBXGroup;
 			children = (
+				BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */,
+				BEAEE49023DD7B6A002B5698 /* darling-nikkiDebug.entitlements */,
 				BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */,
 				BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */,
 				BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */,
@@ -88,7 +97,7 @@
 				BE458EA323DB044700A54895 /* Zensor.swift */,
 				BE226CC723DCC2F800DDD2FF /* Date.swift */,
 			);
-			path = "darling-nikki";
+			path = zensors;
 			sourceTree = "<group>";
 		};
 		BE5F3FD123DAF2A100CF7185 /* Preview Content */ = {
@@ -111,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE5F3FC523DAF2A100CF7185 /* darling-nikki */ = {
+		BE5F3FC523DAF2A100CF7185 /* zensors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "darling-nikki" */;
+			buildConfigurationList = BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "zensors" */;
 			buildPhases = (
 				A7B297FD01A61E327ADE4803 /* [CP] Check Pods Manifest.lock */,
 				BE5F3FC223DAF2A100CF7185 /* Sources */,
@@ -125,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = "darling-nikki";
+			name = zensors;
 			productName = "darling-nikki";
-			productReference = BE5F3FC623DAF2A100CF7185 /* darling-nikki.app */;
+			productReference = BE5F3FC623DAF2A100CF7185 /* zensors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "darling-nikki" */;
+			buildConfigurationList = BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "zensors" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -158,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE5F3FC523DAF2A100CF7185 /* darling-nikki */,
+				BE5F3FC523DAF2A100CF7185 /* zensors */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +180,7 @@
 				BE5F3FD623DAF2A100CF7185 /* LaunchScreen.storyboard in Resources */,
 				BE458EA623DB07BA00A54895 /* GoogleService-Info.plist in Resources */,
 				BE5F3FD323DAF2A100CF7185 /* Preview Assets.xcassets in Resources */,
+				BE1291DD23DE19DE004E0E58 /* Default-568h@2x.png in Resources */,
 				BE5F3FD023DAF2A100CF7185 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,16 +375,17 @@
 			baseConfigurationReference = 7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "zensors/darling-nikkiDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"darling-nikki/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"zensors/Preview Content\"";
 				DEVELOPMENT_TEAM = 6N25VDH5A9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "darling-nikki/Info.plist";
+				INFOPLIST_FILE = zensors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tools.zendo.darling-nikki";
+				PRODUCT_BUNDLE_IDENTIFIER = tools.zendo.zensors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,15 +398,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"darling-nikki/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"zensors/Preview Content\"";
 				DEVELOPMENT_TEAM = 6N25VDH5A9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "darling-nikki/Info.plist";
+				INFOPLIST_FILE = zensors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tools.zendo.darling-nikki";
+				PRODUCT_BUNDLE_IDENTIFIER = tools.zendo.zensors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,7 +416,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "darling-nikki" */ = {
+		BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "zensors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5F3FD823DAF2A100CF7185 /* Debug */,
@@ -414,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "darling-nikki" */ = {
+		BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "zensors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5F3FDB23DAF2A100CF7185 /* Debug */,
