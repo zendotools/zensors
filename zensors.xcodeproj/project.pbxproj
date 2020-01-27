@@ -18,13 +18,15 @@
 		BE5F3FD323DAF2A100CF7185 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD223DAF2A100CF7185 /* Preview Assets.xcassets */; };
 		BE5F3FD623DAF2A100CF7185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F3FD423DAF2A100CF7185 /* LaunchScreen.storyboard */; };
 		BEAEE49223DD7B6A002B5698 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAEE49123DD7B6A002B5698 /* HomeKit.framework */; };
-		D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */; };
+		CEFFF5B609DBC11F5AB6048E /* Pods_zensors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621BDC821516C28FA6E51EE0 /* Pods_zensors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_darling_nikki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.release.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.release.xcconfig"; sourceTree = "<group>"; };
+		5D558CB9B3E770C220B44617 /* Pods-zensors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zensors.debug.xcconfig"; path = "Target Support Files/Pods-zensors/Pods-zensors.debug.xcconfig"; sourceTree = "<group>"; };
+		621BDC821516C28FA6E51EE0 /* Pods_zensors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zensors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-darling-nikki.debug.xcconfig"; path = "Target Support Files/Pods-darling-nikki/Pods-darling-nikki.debug.xcconfig"; sourceTree = "<group>"; };
+		AD743FE536DB936512F340B7 /* Pods-zensors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zensors.release.xcconfig"; path = "Target Support Files/Pods-zensors/Pods-zensors.release.xcconfig"; sourceTree = "<group>"; };
 		BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE226CC723DCC2F800DDD2FF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BE39098723DE59E700FEC6C3 /* zensors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zensors.entitlements; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAEE49223DD7B6A002B5698 /* HomeKit.framework in Frameworks */,
-				D2B19B4C16799EDD605F5F01 /* Pods_darling_nikki.framework in Frameworks */,
+				CEFFF5B609DBC11F5AB6048E /* Pods_zensors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAEE49123DD7B6A002B5698 /* HomeKit.framework */,
-				02E3FEBC1716E54E80047415 /* Pods_darling_nikki.framework */,
+				621BDC821516C28FA6E51EE0 /* Pods_zensors.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +117,8 @@
 			children = (
 				7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */,
 				211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */,
+				5D558CB9B3E770C220B44617 /* Pods-zensors.debug.xcconfig */,
+				AD743FE536DB936512F340B7 /* Pods-zensors.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -196,15 +200,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zensors/Pods-zensors-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zensors/Pods-zensors-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-darling-nikki/Pods-darling-nikki-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zensors/Pods-zensors-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7B297FD01A61E327ADE4803 /* [CP] Check Pods Manifest.lock */ = {
@@ -222,7 +226,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-darling-nikki-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-zensors-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,7 +378,7 @@
 		};
 		BE5F3FDB23DAF2A100CF7185 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CAFBDB2F90D05D58CBB8462 /* Pods-darling-nikki.debug.xcconfig */;
+			baseConfigurationReference = 5D558CB9B3E770C220B44617 /* Pods-zensors.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "zensors/darling-nikkiDebug.entitlements";
@@ -398,7 +402,7 @@
 		};
 		BE5F3FDC23DAF2A100CF7185 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 211352B1307BE3EB2E3717A7 /* Pods-darling-nikki.release.xcconfig */;
+			baseConfigurationReference = AD743FE536DB936512F340B7 /* Pods-zensors.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = zensors/zensors.entitlements;
