@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import HomeKit
 
 struct ZensorView: View
 {
@@ -17,34 +16,34 @@ struct ZensorView: View
     {
         HStack
             {
+                
                 VStack {
                     
                     Image(systemName: "dot.radiowaves.right").padding(5)
-                    
-                    Text(model.name).font(.system(size: 10)).padding(10)
+                    Text(model.name.suffix(3)).font(.system(size: 10)).bold()
                 }
-            
+                
+                
+                VStack {
                     
-                    VStack {
-                    
-                        Image(systemName: "stopwatch").padding(5)
-                        Text(model.duration).font(.system(size: 10)).bold()
-                    }
-                    
-                    VStack {
-                        Image(systemName: "gauge").padding(5)
-                        Text(model.samples.count.description).font(.system(size: 10)).bold()
-                    }
-                    
-                    VStack {
+                    Image(systemName: "stopwatch").padding(5)
+                    Text(model.duration).font(.system(size: 10)).bold()
+                }
+                
+                VStack {
+                    Image(systemName: "gauge").padding(5)
+                    Text(model.samples.count.description).font(.system(size: 10)).bold()
+                }
+                
+                VStack {
                     Image(systemName: "heart").padding(5)
-                    Text(model.hr).font(.system(size: 10)).bold()
-                        
-                }
+                    Text(model.hr.prefix(4)).font(.system(size: 10)).bold()
                     
+                }
+                
                 VStack {
                     Image(systemName: "waveform.path.ecg").padding(5)
-                    Text(model.hrv).font(.system(size: 10)).bold()
+                    Text(model.hrv.prefix(4)).font(.system(size: 10)).bold()
                     
                 }
                 
@@ -61,7 +60,22 @@ struct ZensorView: View
                     Text(model.level.description).font(.system(size: 10)).bold()
                     
                 }
+                
+                
+                VStack {
                     
+                    Image(systemName: "list.number").padding(5)
+                    Text(model.isInBreath.description).font(.system(size: 10)).bold()
+                    
+                }
+                
+                
+                VStack {
+                    
+                    Image(systemName: "list.number").padding(5)
+                    Text(model.isOutBreath.description).font(.system(size: 10)).bold()
+                    
+                }
         }
     }
 }
@@ -74,26 +88,25 @@ struct ContentView: View {
     {
         VStack {
             Text("Zensors").font(.headline)
-                List {
-                        ForEach(zensors.current) {
-                            
-                            zensor in
-                            
-                            ZensorView(model: zensor)
-                            
-                    }
-            }
-
-                Button("Reset")
-                {
-                    self.zensors.reset()
+            List {
+                ForEach(zensors.current) {
+                    
+                    zensor in
+                    
+                    ZensorView(model: zensor)
+                    
                 }
+            }
+            
+            Button("Reset")
+            {
+                self.zensors.reset()
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    
     
     static var previews: some View {
         ContentView()

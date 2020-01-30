@@ -9,6 +9,7 @@
 import Foundation
 import CoreBluetooth
 import FirebaseDatabase
+import HomeKit
 
 public class Zensor : Identifiable, ObservableObject
 {
@@ -23,6 +24,8 @@ public class Zensor : Identifiable, ObservableObject
     @Published public var duration : String = "0"
     @Published public var progress : String = "true/0"
     @Published public var isMeditating : Bool = false
+    @Published public var isInBreath : Bool = false
+    @Published public var isOutBreath : Bool = false
     @Published public var level : Int = 0
     @Published public var samples = [Float]()
     
@@ -52,8 +55,49 @@ public class Zensor : Identifiable, ObservableObject
                         
             self.progress = self.getProgress()
             
+            self.isInBreath = self.getInBreath()
+            
+            self.isOutBreath = self.getOutBreath()
+            
             self.publish()
         }
+    }
+    
+    
+    func getInBreath() -> Bool
+    {
+        var retval = false
+        
+        if(self.samples.count > 10)
+        {
+            let lastSamples = self.samples.suffix(3)
+            
+            if(lastSamples.count == 3)
+            {
+                //is the heartrate sloping up?
+                retval = lastSamples[0] + lastSamples[1] < lastSamples[1] + lastSamples[2]
+            }
+        }
+        
+        return retval
+    }
+    
+    func getOutBreath() -> Bool
+    {
+        var retval = false
+        
+        if(self.samples.count > 10)
+        {
+            let lastSamples = self.samples.suffix(3)
+            
+            if(lastSamples.count == 3)
+            {
+                //is the heartrate sloping up?
+                retval = lastSamples[0] + lastSamples[1] < lastSamples[1] + lastSamples[2]
+            }
+        }
+        
+        return retval
     }
     
     func getLevel() -> Int {
@@ -83,8 +127,6 @@ public class Zensor : Identifiable, ObservableObject
             {
                 retval = true
             }
-            
-            self.samples.removeAll()
             
         }
         
@@ -172,19 +214,55 @@ public class Zensor : Identifiable, ObservableObject
     }
 }
 
-open class Zensors : NSObject, CBCentralManagerDelegate, ObservableObject {
-    
+open class Zensors : NSObject, CBCentralManagerDelegate, HMHomeManagerDelegate, ObservableObject {
+
     let centralQueue: DispatchQueue = DispatchQueue(label: "tools.sunyata.zendo", attributes: .concurrent)
     
     var centralManager: CBCentralManager!
     
+    let homeManager = HMHomeManager()
+    
     @Published public var current: [Zensor] = []
+    
+    var lightCharacteristic : HMCharacteristic? = nil
     
     override init()
     {
         super.init()
         
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
+    
+        homeManager.delegate = self
+        
+    }
+    
+    func hsba(from color: UIColor) -> [CGFloat] {
+        
+        let HSBA = [CGFloat](repeating: 0.0, count: 4)
+        
+        var hue = HSBA[0]
+        var saturation = HSBA[1]
+        var brightness = HSBA[2]
+        var alpha = HSBA[3]
+        
+        color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        
+        return HSBA
+    }
+    
+    public func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
+        
+        guard let home = manager.homes.first else { return }
+  
+        let lights = home.accessories.filter { $0.category.categoryType == HMAccessoryCategoryTypeLightbulb }
+
+        let lightCharacteristics = lights
+        .flatMap { $0.services }
+        .flatMap { $0.characteristics }
+        .filter { $0.characteristicType == HMCharacteristicTypeBrightness }
+
+        self.lightCharacteristic = lightCharacteristics.first!
+        
     }
     
     func reset()
@@ -250,12 +328,18 @@ open class Zensors : NSObject, CBCentralManagerDelegate, ObservableObject {
                                 if let zensor  = self.current.first(where: { $0.id == peripheral.identifier })
                                 {
                                     zensor.update(hr: hr)
+                                    
+                                    if peripheral.name!.contains("502") {
+                                        
+                                        self.lightCharacteristic?.writeValue(NSNumber(value: Double(hr)), completionHandler: { if let error = $0 { print("Failed: \(error)") } })
+                                    }
                                 }
                                 else
                                 {
                                     let zensor = Zensor(id: peripheral.identifier , name: peripheral.name ?? "unknown", hr: hr, batt: batt)
                                     self.current.append(zensor)
                                 }
+                
                         }
                     }
                 }
