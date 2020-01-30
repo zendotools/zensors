@@ -41,9 +41,25 @@ struct ZensorView: View
                     
                 }
                 
+                
+                               VStack {
+                                   
+                                   Image(systemName: "arrow.up").padding(5)
+                                   Text(model.isInBreath.description).font(.system(size: 10)).bold()
+                                   
+                               }
+                               
+                               
+                               VStack {
+                                   
+                                   Image(systemName: "arrow.down").padding(5)
+                                   Text(model.isOutBreath.description).font(.system(size: 10)).bold()
+                                   
+                               }
+                
                 VStack {
                     Image(systemName: "waveform.path.ecg").padding(5)
-                    Text(model.hrv.prefix(4)).font(.system(size: 10)).bold()
+                    Text(model.hrv).font(.system(size: 10)).bold()
                     
                 }
                 
@@ -61,21 +77,7 @@ struct ZensorView: View
                     
                 }
                 
-                
-                VStack {
-                    
-                    Image(systemName: "list.number").padding(5)
-                    Text(model.isInBreath.description).font(.system(size: 10)).bold()
-                    
-                }
-                
-                
-                VStack {
-                    
-                    Image(systemName: "list.number").padding(5)
-                    Text(model.isOutBreath.description).font(.system(size: 10)).bold()
-                    
-                }
+               
         }
     }
 }

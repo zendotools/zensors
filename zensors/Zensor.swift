@@ -44,20 +44,20 @@ public class Zensor : Identifiable, ObservableObject
         self.hr = hr.rounded().description
          
         self.duration = self.getDuration().description
+        
+        self.isInBreath = self.getInBreath()
+                   
+        self.isOutBreath = self.getOutBreath()
+        
+        self.hrv = self.getHRV().description
 
-        if (self.samples.count > 10)
+        if (self.samples.count > 9 && self.samples.count % 10 == 0)
         {
-            self.hrv = self.getHRV().rounded().description
-            
             self.isMeditating = getMeditativeState()
             
             self.level = getLevel()
                         
             self.progress = self.getProgress()
-            
-            self.isInBreath = self.getInBreath()
-            
-            self.isOutBreath = self.getOutBreath()
             
             self.publish()
         }
@@ -68,9 +68,9 @@ public class Zensor : Identifiable, ObservableObject
     {
         var retval = false
         
-        if(self.samples.count > 10)
+        if(self.samples.count > 9)
         {
-            let lastSamples = self.samples.suffix(3)
+            let lastSamples = Array(self.samples.suffix(3))
             
             if(lastSamples.count == 3)
             {
@@ -88,12 +88,12 @@ public class Zensor : Identifiable, ObservableObject
         
         if(self.samples.count > 10)
         {
-            let lastSamples = self.samples.suffix(3)
+            let lastSamples = Array(self.samples.suffix(3))
             
             if(lastSamples.count == 3)
             {
-                //is the heartrate sloping up?
-                retval = lastSamples[0] + lastSamples[1] < lastSamples[1] + lastSamples[2]
+                //is the heartrate sloping down?
+                retval = lastSamples[2] + lastSamples[1] < lastSamples[1] + lastSamples[0]
             }
         }
         
@@ -118,12 +118,12 @@ public class Zensor : Identifiable, ObservableObject
         
         if (self.samples.count > 10)
         {
-            let min = self.samples.min()
-            let max = self.samples.max()
+            let min = self.samples.suffix(10).min()
+            let max = self.samples.suffix(10).max()
             
             let range = max! - min!
             
-            if range > 3
+            if range > 3.0
             {
                 retval = true
             }
@@ -161,6 +161,7 @@ public class Zensor : Identifiable, ObservableObject
     
     func standardDeviation(_ arr : [Float]) -> Float
     {
+        
         let rrIntervals = arr.map
         {
             (beat) -> Float in
@@ -175,7 +176,7 @@ public class Zensor : Identifiable, ObservableObject
         let sumOfSquaredAvgDiff = rrIntervals.map
         {pow($0 - avg, 2.0)}.reduce(0, {$0 + $1})
         
-        return 100 * sqrt(sumOfSquaredAvgDiff / length)
+        return sqrt(sumOfSquaredAvgDiff / length)
         
     }
     
@@ -329,9 +330,17 @@ open class Zensors : NSObject, CBCentralManagerDelegate, HMHomeManagerDelegate, 
                                 {
                                     zensor.update(hr: hr)
                                     
+                                    
                                     if peripheral.name!.contains("502") {
                                         
-                                        self.lightCharacteristic?.writeValue(NSNumber(value: Double(hr)), completionHandler: { if let error = $0 { print("Failed: \(error)") } })
+                                        var brightness = 0.0
+                                        
+                                        if(zensor.isInBreath)
+                                        {
+                                            brightness = 100.0
+                                        }
+                                        
+                                        self.lightCharacteristic?.writeValue(NSNumber(value: Double(brightness)), completionHandler: { if let error = $0 { print("Failed: \(error)") } })
                                     }
                                 }
                                 else

@@ -32,7 +32,7 @@
 		BE39098723DE59E700FEC6C3 /* zensors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zensors.entitlements; sourceTree = "<group>"; };
 		BE458EA323DB044700A54895 /* Zensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zensor.swift; sourceTree = "<group>"; };
 		BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BE5F3FC623DAF2A100CF7185 /* zensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5F3FC623DAF2A100CF7185 /* Zensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE5F3FCD23DAF2A100CF7185 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,7 +40,6 @@
 		BE5F3FD223DAF2A100CF7185 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE5F3FD523DAF2A100CF7185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5F3FD723DAF2A100CF7185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEAEE49023DD7B6A002B5698 /* darling-nikkiDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "darling-nikkiDebug.entitlements"; sourceTree = "<group>"; };
 		BEAEE49123DD7B6A002B5698 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -79,7 +78,7 @@
 		BE5F3FC723DAF2A100CF7185 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE5F3FC623DAF2A100CF7185 /* zensors.app */,
+				BE5F3FC623DAF2A100CF7185 /* Zensors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +88,6 @@
 			children = (
 				BE39098723DE59E700FEC6C3 /* zensors.entitlements */,
 				BE1291DC23DE19DE004E0E58 /* Default-568h@2x.png */,
-				BEAEE49023DD7B6A002B5698 /* darling-nikkiDebug.entitlements */,
 				BE458EA523DB07BA00A54895 /* GoogleService-Info.plist */,
 				BE5F3FC923DAF2A100CF7185 /* AppDelegate.swift */,
 				BE5F3FCB23DAF2A100CF7185 /* SceneDelegate.swift */,
@@ -126,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE5F3FC523DAF2A100CF7185 /* zensors */ = {
+		BE5F3FC523DAF2A100CF7185 /* Zensors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "zensors" */;
+			buildConfigurationList = BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "Zensors" */;
 			buildPhases = (
 				A7B297FD01A61E327ADE4803 /* [CP] Check Pods Manifest.lock */,
 				BE5F3FC223DAF2A100CF7185 /* Sources */,
@@ -140,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = zensors;
+			name = Zensors;
 			productName = "darling-nikki";
-			productReference = BE5F3FC623DAF2A100CF7185 /* zensors.app */;
+			productReference = BE5F3FC623DAF2A100CF7185 /* Zensors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "zensors" */;
+			buildConfigurationList = BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "Zensors" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE5F3FC523DAF2A100CF7185 /* zensors */,
+				BE5F3FC523DAF2A100CF7185 /* Zensors */,
 			);
 		};
 /* End PBXProject section */
@@ -427,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "zensors" */ = {
+		BE5F3FC123DAF2A100CF7185 /* Build configuration list for PBXProject "Zensors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5F3FD823DAF2A100CF7185 /* Debug */,
@@ -436,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "zensors" */ = {
+		BE5F3FDA23DAF2A100CF7185 /* Build configuration list for PBXNativeTarget "Zensors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5F3FDB23DAF2A100CF7185 /* Debug */,
